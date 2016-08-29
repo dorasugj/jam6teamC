@@ -50,7 +50,7 @@ public class Spin : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col)
     {
         
-        if (col.tag == "RightBottom")
+        if (col.gameObject.tag == "RightBottom")
         {
             int cornerNum = (int)FourCorner.RightBottom;
 
@@ -67,7 +67,7 @@ public class Spin : MonoBehaviour {
             if(passCorner[(cornerNum+3)%4]||AllFalseCheck())
                 passCorner[cornerNum] = true;
         }
-        else if (col.tag == "RightTop")
+        else if (col.gameObject.tag == "RightTop")
         {
             int cornerNum = (int)FourCorner.RightTop;
             if (OneSpinCheck())
@@ -82,7 +82,7 @@ public class Spin : MonoBehaviour {
             if (passCorner[(cornerNum + 3) % 4] || AllFalseCheck())
                 passCorner[cornerNum] = true;
         }
-        else if (col.tag == "LeftTop")
+        else if (col.gameObject.tag == "LeftTop")
         {
             int cornerNum = (int)FourCorner.LeftTop;
             if (OneSpinCheck())
@@ -97,7 +97,7 @@ public class Spin : MonoBehaviour {
             if (passCorner[(cornerNum + 3) % 4] || AllFalseCheck())
                 passCorner[cornerNum] = true;
         }
-        else if (col.tag == "LeftBottom")
+        else if (col.gameObject.tag == "LeftBottom")
         {
             int cornerNum = (int)FourCorner.LeftBottom;
             if (OneSpinCheck())
